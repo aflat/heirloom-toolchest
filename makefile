@@ -1,4 +1,8 @@
-SHELL = /sbin/sh
+ifneq ("$(wildcard /usr/5bin/sh)","")
+SHELL = /usr/5bin/sh
+else
+SHELL = /bin/sh
+endif
 
 SUBDIRS = build libwchar libcommon libuxre _install \
 	banner basename bc bdiff bfs \
